@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PrjLibvirtView</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+	<div 
+	style=" -webkit-border-top-left-radius: 5px;
+	-webkit-border-top-right-radius: 5px;
+	-moz-border-radius-topleft: 5px;
+	-moz-border-radius-topright: 5px;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	font-family:Verdana, Geneva, sans-serif;
+	border:dashed 1px; border-color:#09c;
+	background:#f5f5f5; padding:5px;">
+	<h1 style="font-size:14px; font-weight:bold;"><%= image_tag('libvirt.png')%>LibVirt View</h1></br>
+</div>
+    <ul class="nav nav-tabs">
+    <li class="active">
+    <a href="#">Libvrit View</a>
+    </li>
+           <li><%= link_to "start",  controller: "show_rotes", action: "vrt_start"%></li>
+           <li><%= link_to "stop",   controller: "show_rotes", action: "vrt_stop"%></li>
+           <li><%= link_to "status", controller: "show_rotes", action: "vrt_status"%></li>
+    </ul>
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div class="span2">
+	  	<%= image_tag('route.png')%>
+      </div>
+   <div class="span10">
+       <%= yield %>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

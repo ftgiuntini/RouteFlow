@@ -1,0 +1,32 @@
+<div 
+style=" -webkit-border-top-left-radius: 5px;
+-webkit-border-top-right-radius: 5px;
+-moz-border-radius-topleft: 5px;
+-moz-border-radius-topright: 5px;
+border-top-left-radius: 5px;
+border-top-right-radius: 5px;
+font-family:Verdana, Geneva, sans-serif;
+border:dashed 1px; border-color:#09c;
+background:#f5f5f5; padding:5px;">
+<h1 style="font-size:14px; font-weight:bold;">Controle LibVirt:</h1></br><%= @msg %>
+</div>
+<table class="table table-striped">
+  <caption>Tabela de Roteadores</caption>
+  <thead>
+    <tr>
+      <th>vm_id</th>
+      <th>vm_port</th>
+      <th>dp_id</th>
+      <th>dp_port</th>
+    </tr>
+  </thead>
+  <% @csv.each do |row| %>
+      <tr>
+    <% row.each do |column| %>
+        <td><%= column[1] %></td>
+    <% end %>
+      </tr>
+  <% end %>
+</table>
+<br/>
+
